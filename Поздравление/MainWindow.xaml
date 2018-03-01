@@ -5,18 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Поздравление"
         mc:Ignorable="d"
-        Title="MainWindow" WindowStyle="None"  Height="350" Width="525" Icon="Resources/unnamed.ico">
-        
+        Title="MainWindow" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized"  Height="500" Width="920" MinHeight="500" MinWidth="920" Icon="Resources/unnamed.ico">
+
 
     <Window.Background>
-        <ImageBrush ImageSource="Resources/maxresdefault.jpg" TileMode="None" Stretch="Fill" />
+        <ImageBrush ImageSource="Resources/3523x2455_803760_[www.ArtFile.ru].jpg" TileMode="None" Stretch="Fill" />
     </Window.Background>
 
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <Grid >
-            <Button Margin="60,0,0,21" HorizontalAlignment="Left" Width="115" FontFamily="Thimes New Roman" FontSize="11" FontStyle="Italic" Cursor="Hand" Click="Button_Click" Height="30" VerticalAlignment="Bottom">
-                Остановить музыку
-            </Button>
+        <Grid RenderTransformOrigin="0.682,0.566">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*"/>
+                <RowDefinition Height="355*"/>
+            </Grid.RowDefinitions>
+            <Label BorderBrush="AliceBlue" Grid.Row="0" MouseLeftButtonDown="Label_MouseLeftButtonDown" FontStyle="Italic" FontWeight="Bold" Foreground="Red" Margin="0,0,0,7" >Поздравление!!!</Label>
+            <Image Cursor="Hand" VerticalAlignment="Top" HorizontalAlignment="Right" PreviewMouseUp="Image_PreviewMouseUp_1" Source="Resources/cross.png" Height="30" Width="30" Margin="0,5,10,0"></Image>
+            <Image Cursor="Hand" PreviewMouseUp="Image_PreviewMouseUp" Source="Resources/if_Exit_Full_Screen_81851.png"  Height="30" Width="30" Margin="0,5,45,0" VerticalAlignment="Top" HorizontalAlignment="Right"></Image>
+            <StackPanel>
+            </StackPanel>
+            <Button Grid.Row="1" Margin="0,0,10,10" FontFamily="Thimes New Roman" FontSize="11" FontStyle="Italic" Cursor="Hand" Click="Button_Click" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="115">Остановить музыку</Button>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  RenderTransformOrigin="0.5,0.5" Margin="430,116,100,117" Height="220" Width="390">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-6.441"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="52"/>
+                    <RowDefinition Height="124"/>
+                </Grid.RowDefinitions>
+                <Label Name="LbName" Grid.Row="0" HorizontalContentAlignment="Center" Content="Светлана" FontStyle="Italic" FontSize="20" FontWeight="DemiBold" Foreground="Red" Height="52"/>
+                <Label Name="LbCongr" HorizontalContentAlignment="Right" Foreground="Red" FontSize="20" FontStyle="Italic" FontWeight="Light"  Grid.Row="1" Content="Желаю в день 8 Марта &#xD;&#xA;Самых прекрасных теплых слов,&#xD;&#xA;Сюрпризов, радости, подарков&#xD;&#xA;И замечательных цветов.  " Margin="0,1,0,-42" />
+            </Grid>
         </Grid>
     </ScrollViewer>
 

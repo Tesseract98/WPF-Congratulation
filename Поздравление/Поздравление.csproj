@@ -95,10 +95,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\maxresdefault.jpg" />
+    <Resource Include="Resources\unnamed.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\unnamed.ico" />
+    <Resource Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\if_Exit_Full_Screen_81851.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\3523x2455_803760_[www.ArtFile.ru].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toto - Africa.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
