@@ -13,3 +13,5 @@ C:\Users\user\Documents\Visual Studio 2017\repos Project\Поздравлени�
 C:\Users\user\Documents\Visual Studio 2017\repos Project\Поздравление\Поздравление\obj\Debug\Поздравление.csproj.CoreCompileInputs.cache
 C:\Users\user\Documents\Visual Studio 2017\repos Project\Поздравление\Поздравление\obj\Debug\Поздравление.exe
 C:\Users\user\Documents\Visual Studio 2017\repos Project\Поздравление\Поздравление\obj\Debug\Поздравление.pdb
+C:\Users\user\Documents\Visual Studio 2017\repos Project\Поздравление\Поздравление\obj\Debug\Registration.g.cs
+C:\Users\user\Documents\Visual Studio 2017\repos Project\Поздравление\Поздравление\obj\Debug\Registration.baml

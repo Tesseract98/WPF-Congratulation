@@ -63,6 +63,16 @@ namespace Поздравление.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _19590854 {
+            get {
+                object obj = ResourceManager.GetObject("_19590854", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3523x2455_803760__www_ArtFile_ru_ {
             get {
                 object obj = ResourceManager.GetObject("_3523x2455_803760__www_ArtFile_ru_", resourceCulture);

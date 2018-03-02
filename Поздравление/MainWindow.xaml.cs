@@ -21,18 +21,33 @@ namespace Поздравление
     public partial class MainWindow : Window
     {
         System.Media.SoundPlayer player;
-        public MainWindow()
+        public MainWindow(string str)
         {
             InitializeComponent();
-            LbCongr.FontSize = 25;
-            LbName.FontSize = 25;
             player = new System.Media.SoundPlayer(Properties.Resources.Toto___Africa);
             player.PlayLooping();
+            LbName.Content = str;
+            LbCongr.FontSize = 25;
+            LbName.FontSize = 25;
         }
+
+        private long counter = 0;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            player.Stop();
+            if (counter % 2 == 0)
+            {
+                player.Stop();
+                PLayBtn.Content = "Воспроизвести";
+                PLayBtn.ToolTip = "Воспроизвести музыку";
+            }
+            else
+            {
+                player.PlayLooping();
+                PLayBtn.Content = "Остановить";
+                PLayBtn.ToolTip = "Остановить музыку";
+            }
+            counter++;
         }
 
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -61,6 +76,20 @@ namespace Поздравление
         private void Image_PreviewMouseUp_1(object sender, MouseButtonEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            PLayBtn.Background = System.Windows.Media.Brushes.BlanchedAlmond;
+            PLayBtn.Foreground = System.Windows.Media.Brushes.BlueViolet;
+            PLayBtn.BorderBrush = System.Windows.Media.Brushes.Aqua;
+        }
+
+        private void Button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            PLayBtn.Background = System.Windows.Media.Brushes.SeaShell;
+            PLayBtn.Foreground = System.Windows.Media.Brushes.Blue;
+            PLayBtn.BorderBrush = System.Windows.Media.Brushes.RoyalBlue;
         }
     }
 }
