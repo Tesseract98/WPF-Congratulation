@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Поздравление"
         mc:Ignorable="d"
-        Title="Registration" Height="500" Width="600" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" Icon="Resources/unnamed.ico">
+        Title="Registration" MouseLeftButtonDown="Window_MouseLeftButtonDown" Height="500" Width="600" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" Icon="Resources/unnamed.ico">
 
     <Window.Background>
         <ImageBrush ImageSource="Resources/19590854.jpg" TileMode="None" Stretch="Fill" />
