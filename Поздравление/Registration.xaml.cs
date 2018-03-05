@@ -61,5 +61,24 @@ namespace Поздравление
         {
             this.DragMove();
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                string str = TxtBx.Text;
+                if (IsRight(str) && str.Length > 2)
+                {
+                    string NewStr = str.ToUpper();
+                    MainWindow mw = new MainWindow(NewStr);
+                    mw.Show();
+                    this.Close();
+                }
+                else
+                {
+                    ErrorLbl.Content = "Вы ввели неправильное имя";
+                }
+            }
+        }
     }
 }

@@ -25,10 +25,11 @@ namespace Поздравление
         {
             InitializeComponent();
             player = new System.Media.SoundPlayer(Properties.Resources.Toto___Africa);
-            player.PlayLooping();
+            player.Load();
             LbName.Content = str;
-            LbCongr.FontSize = 25;
-            LbName.FontSize = 25;
+            LbCongr.FontSize = 30;
+            LbName.FontSize = 30;
+            player.PlayLooping();
         }
 
         private long counter = 0;
@@ -60,15 +61,17 @@ namespace Поздравление
             if (this.WindowState == WindowState.Maximized)
             {
                 this.WindowState = WindowState.Normal;
+                LbCongr.HorizontalContentAlignment = HorizontalAlignment.Left;
                 LbCongr.FontSize = 20;
-                LbName.FontSize = 20;
+                LbName.FontSize = 21;
                // LbCongr.Padding = new Thickness(0, 0, 0, 0);
             }
             else
             {
                 this.WindowState = WindowState.Maximized;
-                LbCongr.FontSize = 25;
-                LbName.FontSize = 25;
+                LbCongr.HorizontalContentAlignment = HorizontalAlignment.Center;
+                LbCongr.FontSize = 30;
+                LbName.FontSize = 30;
                 //LbCongr.Padding = new Thickness(0, 0, LbCongr.Width/2, 0);
             }
         }

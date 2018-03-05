@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Поздравление"
         mc:Ignorable="d"
-        Title="Открытка" Name="Win" Topmost="True" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized"  Height="500" Width="920" MinHeight="500" MinWidth="920" Icon="Resources/unnamed.ico">
+        Title="Открытка" Name="Win" WindowStyle="None" Topmost="True" WindowState="Maximized" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  Height="500" Width="920" MinHeight="500" MinWidth="920" Icon="Resources/unnamed.ico">
 
 
     <Window.Background>
@@ -13,7 +13,7 @@
     </Window.Background>
 
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <Grid RenderTransformOrigin="0.682,0.566">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="37*"/>
                 <RowDefinition Height="355*"/>
@@ -35,8 +35,8 @@
                     <RowDefinition Height="52"/>
                     <RowDefinition Height="124"/>
                 </Grid.RowDefinitions>
-                <Label Name="LbName" Grid.Row="0" HorizontalContentAlignment="Center" Content="" FontStyle="Italic" FontSize="20" FontWeight="DemiBold" Foreground="Red" Height="52" Margin="0,0,0,1"/>
-                <Label Name="LbCongr" HorizontalContentAlignment="Center" Foreground="Red" FontSize="20" FontStyle="Italic" FontWeight="Light"  Grid.Row="1" Content="Желаю в день 8 Марта &#xD;&#xA;Самых прекрасных теплых слов,&#xD;&#xA;Сюрпризов, радости, подарков&#xD;&#xA;И замечательных цветов.  " Margin="0,1,0,-42" />
+                <Label Name="LbName" Grid.Row="0" HorizontalContentAlignment="Center" Content="" FontStyle="Italic" FontSize="20" FontWeight="DemiBold" Foreground="Red" Height="52" Margin="0,1,0,0"/>
+                <Label Name="LbCongr" HorizontalContentAlignment="Left" Foreground="Red" FontSize="22" FontStyle="Italic" FontWeight="Light" Content="Желаю в день 8 Марта &#xD;&#xA;Самых прекрасных теплых слов,&#xD;&#xA;Сюрпризов, радости, подарков&#xD;&#xA;И замечательных цветов.  " Margin="41,10,-142,-150" Grid.Row="1" />
             </Grid>
         </Grid>
     </ScrollViewer>
