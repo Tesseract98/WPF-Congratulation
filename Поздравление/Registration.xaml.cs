@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Поздравление
 {
@@ -29,11 +19,21 @@ namespace Поздравление
 
         }
 
+        bool IsEnglishLetter(char symb)
+        {
+            return symb >= 'A' && symb <= 'Z' || symb >= 'a' && symb <= 'z';
+        }
+
+        bool IsRussianLetter(char symb)
+        {
+            return symb >= 'А' && symb <= 'Я' || symb >= 'а' && symb <= 'я' || symb == 'ё' || symb == 'Ё';
+        }
+
         bool IsRight(string str)
         {
-            for(int i = 0; i < str.Length; i++)
+            for (int i = 0; i < str.Length; i++)
             {
-                if(!(str[i] >= 'A' && str[i] <= 'Z' || str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'А' && str[i] <= 'Я' || str[i] >= 'а' && str[i] <= 'я' || str[i] == 'ё' || str[i] == 'Ё'))
+                if (!(IsEnglishLetter(str[i]) || IsRussianLetter(str[i])))
                 {
                     return false;
                 }
@@ -64,13 +64,13 @@ namespace Поздравление
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Enter)
+            if (e.Key == Key.Enter)
             {
-                string str = TxtBx.Text;
-                if (IsRight(str) && str.Length > 2)
+                var str = TxtBx.Text;
+                if (IsRight(str) && str.Length >= 2)
                 {
-                    string NewStr = str.ToUpper();
-                    MainWindow mw = new MainWindow(NewStr);
+                    var NewStr = str.ToUpper();
+                    var mw = new MainWindow(NewStr);
                     mw.Show();
                     this.Close();
                 }
